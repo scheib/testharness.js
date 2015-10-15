@@ -2637,10 +2637,11 @@ policies and contribution forms [3].
     addEventListener("error", function(e) {
         if (tests.tests.length === 0) {
             tests.set_file_is_test();
-        };
+        }
 
+        var stack;
         if (e.error && e.error.stack) {
-            var stack = e.error.stack;
+            stack = e.error.stack;
         } else {
             stack = e.filename + ":" + e.lineno + ":" + e.colno;
         }
